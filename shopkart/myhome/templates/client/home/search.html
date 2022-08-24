@@ -1,0 +1,432 @@
+
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- <section class="search-wrapper">
+  <div class="container">
+      <div class="row text-white">
+        <div id="search-containers">
+          <input type="search" id="search-input" placeholder="Search product name here">
+          <button id="srch">Search</button>
+        </div>
+      </div>
+  </div>
+</section> -->
+
+<section style="padding-top: 80px;">
+ 
+<h2 class="text-center">Product Searching</h2>
+
+<input type="text" class="form-control mx-auto w-75" id="myinput" placeholder="Search here...">
+  <div class="container position-relative ">
+      <h3 class="position-absolute text-danger top-50 start-50 my-2 d-none" id="para">Not Found</h3>
+      <div class="row mt-3" id="search-card">
+
+      </div>
+  </div>
+
+</section>
+
+<section class="srcsection">
+  <div class="container">
+     <div class="row p-2">
+         <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
+             <div class="price-filter shadow py-3">
+              <h4 class="widget-title text-center">
+                 <span>Filter</span>
+              </h4>
+              <hr class="w-50 bg-dark text-center mx-auto">
+              
+             </div>
+            
+         </div>
+         <div class="col-lg-9 col-md-12 col-sm-12">
+             <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men13.jpg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>20%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Men's full sleeve Cotton Formal Shirt</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men2.jpg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    
+                    <div class="rwd-text ">
+                      <p class=" my-1">Blue Denim Casual Shirt</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men1.jpg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>20%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Long Sleeve Shirt</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men3.jpeg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>8%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Stylish Regular janes Pants</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men9.jpeg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>15%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Men sleeve Cotton Formal Shirt</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men5.jpeg
+                    " alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>20%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Trendy Cotton T-Shirt</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men4.jpeg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>21%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Olive Cotton Sleeve T-Shirt</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men7.jpeg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>10%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Olive full Cotton Sleeve T-Shirt</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men8.jpeg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>10%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Stylish semi long panjaby</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men9.jpeg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>8%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Raven Solid Formal Shirt</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men10.jpeg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>15%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Raven Blue Solid Formal Shirt</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 ">
+                  <div class="src-rwd-detail">
+                    <img src="https://theme.bitspecksolutions.com/html-template/sobarbazar/demo/images/men11.jpeg" alt="" class="img-responsive">
+                    <div class="cart-heart">
+                      <ul>
+                        <li><i class="fa fa-shopping-cart"></i></li>
+                        <li><i class="fa fa-heart"></i></li>
+                      </ul>
+                    </div>
+                    <div class="rwd-percent text-center">
+                      <p>10%</p>
+                    </div>
+                    <div class="rwd-percent1 text-center">
+                      <p>Hot sale</p>
+                    </div>
+                    <div class="rwd-text ">
+                      <p class=" my-1">Semi Long Kabli Set for Men</p>
+                      <ul class="d-flex align-items-center list-unstyled my-0">
+                        <li class="mr-1 star-no">4.5</li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star"></i></li>
+                        <li class="mr-1"><i class="fa fa-star-half"></i></li>
+                      </ul>
+                      <p class="my-2"><span>500</span><strike>1000</strike></p>
+                    </div>
+                  </div>
+                    
+                </div>
+             </div>
+         </div>
+     </div>
+  </div>
+</section>
+
+<script>
+  let filterArray = [];
+  let searchList = [
+    {
+      id:1,
+      name:'LP',
+      src:'/client/home/img/product/product-1.png',
+    }
+
+  ];
+</script>
+
+
+{% endblock %}

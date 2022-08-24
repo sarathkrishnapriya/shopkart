@@ -1,0 +1,432 @@
+
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div class="container single-product">
+    <div class="row justify-content-lg-around pt-4 ">
+        <div class="col-lg-4 rounded bg-light">
+            
+                <img src="{% static '/client/home/img/product/product-1.png' %}" width="100%" id="Product-img">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="{% static '/client/home/img/product/product-2.png' %}" width="100%" class="small-img"> 
+                    </div>
+                    <div class="small-img-col">
+                        <img src="{% static '/client/home/img/product/product-3.png' %}" width="100%" class="small-img"> 
+                    </div>
+                    <div class="small-img-col">
+                        <img src="{% static '/client/home/img/product/product-4.png' %}" width="100%" class="small-img"> 
+                    </div>
+                    <div class="small-img-col">
+                        <img src="{% static '/client/home/img/product/product-5.png' %}" width="100%" class="small-img"> 
+                    </div>
+                </div>
+            
+        </div>
+        
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <p>Home / T-shirts</p>
+            <h1 class="fs-4 fw-medium">Red Printed T-Shirt by HRX</h1>
+
+            <h3 class="mt-1">Product Details <i class="fa fa-indent"></i></h3>
+            
+            <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam voluptatibus ex consectetur quaerat minus!</p>
+            
+            <h4>$50.00</h4>
+            <select name="" id="size-select" class="select-list">
+                <option value="">Select Size</option>
+                <option value="">Small</option>
+                <option value="">Medium</option>
+                <option value="">Large</option> 
+                <option value="">XL</option>
+                <option value="">XXL</option>
+            </select>
+            <input type="number" value="1" min="1" class="w-15">
+            <a href="#" class="product_cart shadow  py-1 px-2 text-decoration-none 
+            bg-success text-white fs-5 fw-medium  mt-4 text-center">Add to Cart</a>
+            
+           
+            
+            
+            
+        </div>
+
+
+
+    </div>
+    
+</div>
+
+<div class="container t-inner-container mt-4 my-sm-4">
+  <div class="row shadow bg-white rounded-lg p-3">
+      <div class="col-md-3">
+         <div class="nav nav-pills col-md-12 mr-3" id="v-pills-tab" role="tablist"
+             aria-orientation="vertical">
+             <a href="#tab1" class="nav-link rounded-pill shadow mb-3 col-sm-12 active
+               text-center" id="web-tab" data-toggle="pill" role="tab" 
+                 aria-controls="web-tab" aria-selected="true">Details</a>
+              
+
+              <a href="#tab2" class="nav-link rounded-pill shadow mb-3 col-sm-12 
+                   text-center" id="review-tab" data-toggle="pill" role="tab" 
+                     aria-controls="review-tab" aria-selected="false">Review</a>     
+
+         </div>
+      </div>
+
+      
+      <div class="col-md-9">
+         <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel" 
+            aria-labelledby="web-tab">
+               <div class="row">
+                  <div class="col-md-12">
+                    <article><h6 class="fw-bold">Product Details</h6></article>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Molestiae facere in dignissimos sunt natus. 
+                      Et quos, ipsa itaque dolorum quasi quam dignissimos exercitationem, 
+                      enim dolorem commodi rem, excepturi est nisi!</p>
+                  </div>  
+                </div>
+
+            </div>
+
+
+            <div class="tab-pane fade" id="tab2" role="tabpanel" 
+                aria-labelledby="review-tab">
+               <div class="row">
+                  
+
+                    <!-- <div class="col-md-5">
+                      <div class="pincheck mt-3"> 
+              
+                       <div class="pinbox ">
+                        <div class="delivery-Service">
+                        <h5>DELIVERY & SERVICE</h5>
+              
+                         <div class="delivery-des">
+                          <h6>Currently showing delivery option for pincode</h6>
+              
+                         </div>
+                         
+                         <div class="delivery-box d-flex align-items-center justify-content-around">
+              
+                          <input name="pincode" type="text" class="pincode" pattern="[0-9]{6}" maxlength="6" placeholder="Pincode">
+                             
+                         </div>
+                         
+                         <div class="delivery-btn ">
+                             <button class="bg-primary w-100 mt-2">Check</button>
+                         </div>
+                           
+                         
+                      </div>
+                    </div>
+              
+                      </div>
+                    </div> -->
+                    
+                    <div class="review-form">
+                      <div class="form-container">
+                        <form class="cnt-form">
+                          
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="exampleInputName">Your Name <span class="astk">*</span></label>
+                                <input type="text" class="form-control txt" id="exampleInputName" placeholder="">
+                              </div><!-- /.form-group -->
+                              <div class="form-group">
+                                <label for="exampleInputSummary">Summary <span class="astk">*</span></label>
+                                <input type="text" class="form-control txt" id="exampleInputSummary" placeholder="">
+                              </div><!-- /.form-group -->
+                            </div>
+      
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="exampleInputReview">Review <span class="astk">*</span></label>
+                                <textarea class="form-control txt txt-review" id="exampleInputReview" rows="4" placeholder=""></textarea>
+                              </div><!-- /.form-group -->
+                            </div>
+                          </div><!-- /.row -->
+                          
+                          <div class="action text-right">
+                            <button class="btn btn-primary btn-upper">SUBMIT REVIEW</button>
+                          </div><!-- /.action -->
+      
+                        </form><!-- /.cnt-form -->
+                      </div><!-- /.form-container -->
+                    </div>
+
+                  
+                  
+               </div>
+
+            </div>
+         </div>
+      </div>
+
+     
+  </div>
+</div>
+
+
+
+  
+
+  
+ 
+  
+
+  <section>
+       <div class="container pl-4 mt-lg-5 mt-md-3">
+            
+         <h2 class="fa fa-lg">Related Products</h2>
+
+                  <div class="slider ">
+                      <div class="owl-carousel">
+                        <div class="slider-card text-center pb-4">
+                           <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="{% static '/client/home/img/product/product-8.png' %}" alt="" class="img-responsive">
+                           </div>
+                           <h3 class="pt-2">Peter England</h3>
+                           
+                           <div class="star">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                          </div>
+                          <p class="item-price"><span>$100.00</span><strike>$120.00</strike></p>
+
+                          <a href="" class="btn btn-primary">Add to Cart</a>
+                          </div>
+                          <div class="slider-card text-center pb-4">
+                           <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="{% static '/client/home/img/product/product-2.png' %}" alt="" class="img-responsive">
+                           </div>
+                           <h3 class="pt-2">Highlander</h3>
+                           
+                           <div class="star">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                          </div>
+                          <p class="item-price"><span>$190.00</span><strike>$200.00</strike></p>
+
+                          <a href="" class="btn btn-primary">Add to Cart</a>
+                          </div>
+
+
+                          <div class="slider-card text-center pb-4">
+                           <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="{% static '/client/home/img/product/product-3.png' %}" alt="" class="img-responsive">
+                           </div>
+                           <h3 class="pt-2">BNS</h3>
+                           
+                           <div class="star">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                          </div>
+                          <p class="item-price"><span>$30.00</span><strike>$40.00</strike></p>
+
+                          <a href="" class="btn btn-primary">Add to Cart</a>
+                          </div>
+
+
+                          <div class="slider-card text-center pb-4">
+                           <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="{% static '/client/home/img/product/product-4.png' %}" alt="" class="img-responsive">
+                           </div>
+                           <h3 class="pt-2">Otto</h3>
+                           
+                           <div class="star">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                          </div>
+                          <p class="item-price"><span>$10.00</span><strike>$15.00</strike></p>
+
+                          <a href="" class="btn btn-primary">Add to Cart</a>
+                          </div>
+
+
+                          <div class="slider-card text-center pb-4">
+                           <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="{% static '/client/home/img/product/product-5.png' %}" alt="" class="img-responsive">
+                           </div>
+                           <h3 class="pt-2">Rupblic</h3>
+                           
+                           <div class="star">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                          </div>
+                          <p class="item-price"><span>$33.00</span><strike>$38.00</strike></p>
+
+                          <a href="" class="btn btn-primary">Add to Cart</a>
+                          </div>
+
+
+                          <div class="slider-card text-center pb-4">
+                           <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="{% static '/client/home/img/product/product-6.png' %}" alt="" class="img-responsive">
+                           </div>
+                           <h3 class="pt-2">LP</h3>
+                           
+                           <div class="star">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                          </div>
+                          <p class="item-price"><span>$40.00</span><strike>$45.00</strike></p>
+
+                          <a href="" class="btn btn-primary">Add to Cart</a>
+                          </div>
+                          <div class="slider-card text-center pb-4">
+                           <div class="d-flex justify-content-center align-items-center mb-4">
+                              <img src="{% static '/client/home/img/product/product-7.png' %}" alt="" class="img-responsive">
+                           </div>
+                           <h3 class="pt-2">Mark</h3>
+                           
+                           <div class="star">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                          </div>
+                          <p class="item-price"><span>$39.00</span><strike>$45.00</strike></p>
+
+                          <a href="" class="btn btn-primary">Add to Cart</a>
+                          </div>
+                      </div>
+                  </div>
+               
+            </div>
+       </div>
+  </section>
+
+  
+
+
+
+  
+
+
+<script>
+
+  var productImage = document.getElementById("Product-img");
+
+  var smallImage = document.getElementsByClassName("small-img");
+//   console.log( document.getElementById("small-img").src)
+ 
+  smallImage[0].onclick = function(){
+    console.log(productImage)
+    productImage.src=smallImage[0].src
+  }
+  smallImage[1].onclick = function(){
+    productImage.src=smallImage[1].src
+  }
+  smallImage[2].onclick = function(){
+    productImage.src=smallImage[2].src
+  }
+  smallImage[3].onclick = function(){
+    productImage.src=smallImage[3].src
+  }
+
+  $('#v-pills-tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+   
+
+  
+  
+  //owl carousel
+  $(document).ready(function(){
+   $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    navText: [
+        "<i class='fa fa-angle-left'></i>",
+        "<i class='fa fa-angle-right'></i>"
+    ],
+    
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+  })
+  });
+
+</script>
+
+{% endblock %}
+
+<!-- <li class="item-a">   
+  <!-- ===box-slider=== -->
+  <!-- <div class=" slider-box col-lg-3 col-md-4 col-sm-12">
+
+<div class="slider-img">
+  <img src="{% static '/client/home/img/new-1.png' %}" alt="1">
+  <!-- ===overlay== -->
+<!-- 
+<div class="overlay">  -->
+
+  <!-- ===Buy Button== -->
+
+  <!-- <a href="#" class="buy-btn">Buy Now</a>
+
+</div>
+</div> -->
+
+
+
+<!-- <div class="slider-content d-flex justify-content-between align-items-center">
+
+
+  <div class="type">
+    <a href="#">Rabbed Cardigan</a>
+    <span>New Arrival</span>
+
+  </div> -->
+
+<!-- ===price=== -->
+
+ <!-- <a href="#" class="price">$23</a>
+
+</div>
+    
+
+  </div>
+</li>  -->

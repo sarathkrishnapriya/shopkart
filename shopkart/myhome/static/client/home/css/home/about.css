@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+.about-1{
+    margin: 30px;
+    padding: 5px;
+}
+.about-1 h2{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 10px;
+
+}
+
+.about-1 p{
+    text-align: center;
+    padding: 3px;
+}
+
+.about-items{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 40px 30px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.about-items i{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.about-items h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin: 5px 0px;
+
+}
+
+.about-items hr{
+  width: 45px;
+  height: 3px;
+  background-color: rgb(235, 13, 57);
+  margin: 8px auto;
+}
+
+.about-items p{
+    margin-top: 15px;
+}
+
+.about-items:hover{
+    background-color: rgba(22, 22, 236, 0.587);
+}
+
+.about-items:hover i, .about-items:hover h3 ,.about-items:hover p {
+   color: white;
+}
+
+.about-items:hover hr{
+    background-color: #fff;
+}
+
